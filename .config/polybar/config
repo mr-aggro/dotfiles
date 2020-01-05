@@ -51,6 +51,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
+
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
@@ -61,9 +62,9 @@ font-5 = "Font Awesome 5 Brands:size=10;1"
 
 
 
-modules-left = app i3 
+modules-left = i3 
 modules-center = 
-modules-right = filesystem temp backlight player-cmus pulseaudio xkeyboard weather memory cpu wlan eth battery temperature date powermenu
+modules-right = filesystem temp backlight player-moc player-cmus pulseaudio xkeyboard weather memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -104,7 +105,7 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+format-prefix =" "
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
@@ -277,6 +278,15 @@ click-left = cmus-remote -n &
 click-right = cmus-remote -r &
 click-middle = cmus-remote -u &
 
+[module/player-moc]
+type = custom/script
+exec = ~/.bin/moc-player.sh
+;exec-if = pgrem -x cmus
+interval = 1
+;click-left = mocp -n &
+;click-right = mocp -r &
+;click-middle = mocp -u &
+
 [module/weather]
 type = custom/script
 exec = ~/.bin/weather.sh
@@ -326,8 +336,8 @@ click-left-exec = echo left
 
 [module/eth]
 type = internal/network
-interface = net0
-interval = 3.0
+interface = eth0
+interval = 1.0
 
 format-connected-underline = #55aa55
 format-connected-prefix = " "
@@ -472,7 +482,7 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+label-open =  
 label-open-foreground = ${colors.secondary}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
