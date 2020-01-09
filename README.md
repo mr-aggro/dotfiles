@@ -30,8 +30,8 @@ https://github.com/emeryberger/DieHard
     
     
 # check char in ttf font
-python check_char.py 🌡
+  python check_char.py 🌡
 
 output:
---> /usr/share/fonts/noto/NotoSansSymbols2-Regular.ttf
---> /usr/share/fonts/Unifont/Unifont_Upper.ttf
+    --> /usr/share/fonts/noto/NotoSansSymbols2-Regular.ttf
+    --> /usr/share/fonts/Unifont/Unifont_Upper.ttf
