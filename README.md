@@ -27,4 +27,11 @@ https://github.com/emeryberger/DieHard
     LD_PRELOAD=/usr/local/lib/libdiehard.so
     export LD_PRELOAD
     $ICAROOT/wfica -file $1
+    
+    
+# check char in ttf font
+python check_char.py 🌡
 
+output:
+--> /usr/share/fonts/noto/NotoSansSymbols2-Regular.ttf
+--> /usr/share/fonts/Unifont/Unifont_Upper.ttf
