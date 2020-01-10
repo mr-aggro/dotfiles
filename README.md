@@ -35,3 +35,16 @@ https://github.com/emeryberger/DieHard
     output:
     --> /usr/share/fonts/noto/NotoSansSymbols2-Regular.ttf
     --> /usr/share/fonts/Unifont/Unifont_Upper.ttf
+    
+# Disable system beep
+    rmmod pcspkr
+    
+# Sound system
+    alsa-utils alsa-plugins alsa-firmware alsa-lib pulseaudio pulseaudio-alsa pulseaudio-bluetooth
+    
+# Auto mount usb
+    pacman -S udiskie
+    
+# Bluetooth
+    https://wiki.archlinux.org/index.php/Bluetooth_headset#Headset_via_Bluez5/PulseAudio
+    pacman -S blueman #GTK manager
