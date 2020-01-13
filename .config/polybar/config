@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #cc222222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -65,7 +65,7 @@ font-6 = "OpenMoji:size=10"
 
 
 
-modules-left = i3 
+modules-left = inet i3 
 modules-center = 
 modules-right = player-moc pulseaudio xkeyboard uparch weather memory cpu wlan eth battery date powermenu
 
@@ -93,6 +93,15 @@ exec = ~/.config/polybar/uparch.sh
 interval = 600
 format-prefix = %{F#777} %{F-}
 format-underline = #0318ff
+;format-prefix = %{F#0a81f5} %{F-}
+#format-prefix-foreground = ${colors.accent}
+
+[module/inet]
+type = custom/script
+exec = ~/.bin/check_internet.sh
+interval = 1
+format-prefix = "   "
+;format-underline = #0318ff
 ;format-prefix = %{F#0a81f5} %{F-}
 #format-prefix-foreground = ${colors.accent}
 
@@ -384,6 +393,7 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
 label = %date% %time%
+
 
 [module/pulseaudio]
 type = internal/pulseaudio
