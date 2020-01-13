@@ -38,6 +38,7 @@ https://github.com/emeryberger/DieHard
     
 # Disable system beep
     rmmod pcspkr
+    echo "blacklist pcspkr" > /etc/modprobe.d/nopcspkr.conf
     
 # Sound system
     alsa-utils alsa-plugins alsa-firmware alsa-lib pulseaudio pulseaudio-alsa pulseaudio-bluetooth
