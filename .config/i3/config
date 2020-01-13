@@ -207,11 +207,14 @@ bindsym $mod+r mode "resize"
 #bar {
 #        status_command i3status
 #}
-exec_always --no-startup-id feh --bg-scale ~/arch.png
+#exec_always --no-startup-id feh --bg-scale ~/arch.png
+exec_always --no-startup-id feh --bg-scale ~/cyber.jpg
 #exec_always --no-startup-id killall back4.sh
 #exec_always --no-startup-id ~/back4.sh 0.05 ~/waterfall.gif
 exec_always --no-startup-id picom
 exec_always --no-startup-id dunst
+exec_always --no-startup-id blueman-tray
+#exec --no-startup-id rmmod pcspkr
 exec --no-startup-id udiskie -t &
 exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle' 
 exec --no-startup-id xinput set-prop "Synaptics TM3336-004" "libinput Tapping Enabled" 1
