@@ -202,7 +202,7 @@ ws-icon-1 = 2;%{T6}%{T-}
 ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;%{T6}%{T-}
-ws-icon-5 = 6;
+ws-icon-5 = 6;%{T6}%{T-}
 ws-icon-6 = 7;
 ws-icon-7 = 8;
 ws-icon-8 = 9;
@@ -400,7 +400,7 @@ type = internal/pulseaudio
 ;sink = bluez_sink.E8_EC_A3_09_E1_FE.a2dp_sink
 ;sink = alsa_output.pci-0000_00_09.2.analog-stereo
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted =   muted
