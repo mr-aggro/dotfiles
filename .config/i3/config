@@ -28,8 +28,7 @@ for_window [class="^.*"] border pixel 1
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-bindsym Mod1+Tab exec --no-startup-id rofi -show
+#bindsym Mod1+Tab exec --no-startup-id rofi -show
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -164,6 +163,7 @@ assign [class="Opera"] $ws2
 assign [class="jetbrains-pycharm-ce"] $ws4
 assign [class="mpv"] $ws3
 assign [class="Wfica"] $ws10
+assign [class="Deluge-gtk"] $ws6
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -218,3 +218,4 @@ exec_always --no-startup-id blueman-tray
 exec --no-startup-id udiskie -t &
 exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle' 
 exec --no-startup-id xinput set-prop "Synaptics TM3336-004" "libinput Tapping Enabled" 1
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
