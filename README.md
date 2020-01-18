@@ -14,6 +14,9 @@ Arch i3 gaps polybar scripts
   Тачпад, включение тапов:
   xinput list-props DEVICE
   xinput set-prop DEVICE PROP [1,0]
+  
+  Скриншот tty
+  sudo ffmpeg -f fbdev -r 1 -i /dev/fb0 -frames:v 1 screen_$(date +%F_%H-%M-%S).jpeg &>/dev/null
  
 # Citrix crashes:
 https://github.com/emeryberger/DieHard
