@@ -1,0 +1,5 @@
+dmesg | tail
+# [ 2204.504481] usb 2-2: New USB device found, idVendor=0403, idProduct=1234, bcdDevice= 6.00
+
+modprobe ftdi-sio
+echo 0403 1234 > /sys/bus/usb-serial/drivers/ftdi_sio/new_id
